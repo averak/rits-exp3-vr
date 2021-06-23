@@ -18,4 +18,4 @@ async def get_books(request: BooksGetRequest = Depends()):
         image_url="画像URL",
     ))
 
-    return BooksGetRequest(books=books)
+    return BooksResponse(books=books)
