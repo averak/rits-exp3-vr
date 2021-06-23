@@ -3,12 +3,13 @@ from fastapi.testclient import TestClient
 import uvicorn
 import argparse
 
+from core.config import api_config
 from core.api.controller import create_app
 
 
 def start_mode():
     app = create_app()
-    uvicorn.run(app, host='0.0.0.0', port=8080)
+    uvicorn.run(app, host=api_config.HOST, port=api_config.PORT)
 
 
 if __name__ == '__main__':
