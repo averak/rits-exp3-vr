@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-from fastapi.testclient import TestClient
 import uvicorn
 import argparse
 

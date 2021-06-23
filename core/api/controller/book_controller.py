@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends
 
 from core.model.book_model import BookModel
 from core.api.request.books_get_request import BooksGetRequest
