@@ -15,6 +15,10 @@ class BookService:
         headers = {"content-type": "application/json"}
         res = requests.get(base_url % (request_body.keyword, request_body.max_results), headers)
 
+        # failed to fetch books
+        if "items" not in res.json():
+            return BooksResponse(books=[])
+
         books: list[BookModel] = []
         for book_item in res.json()["items"]:
             try:
