@@ -8,6 +8,7 @@ fastapi = "*"
 requests = "*"
 uvicorn = "*"
 types-requests = "*"
+locust = "*"
 
 [dev-packages]
 flake8 = "*"
@@ -22,3 +23,4 @@ start = "python main.py --start"
 format = "autopep8 -ivr ."
 lint = "flake8 --show-source ."
 mypy = "mypy ."
+locust = "locust"
