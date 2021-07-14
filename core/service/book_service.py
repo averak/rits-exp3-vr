@@ -26,6 +26,7 @@ class BookService:
                     BookModel(
                         title=book_item["volumeInfo"]["title"],
                         author=book_item["volumeInfo"]["authors"][0],
+                        description=book_item["volumeInfo"]["description"],
                         detail_url=book_item["volumeInfo"]["infoLink"],
                         image_url=book_item["volumeInfo"]["imageLinks"]["smallThumbnail"],
                     )
